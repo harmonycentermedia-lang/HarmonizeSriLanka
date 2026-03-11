@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #11d452;
+  --color-bg-light: #f6f8f6;
+  --color-bg-dark: #102216;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-bg-light);
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+  }
+}
+
+.timeline-line {
+  width: 2px;
+  background: linear-gradient(to bottom, #11d452 0%, #11d452 80%, transparent 100%);
+}
