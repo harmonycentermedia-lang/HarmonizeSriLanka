@@ -43,7 +43,7 @@ export function Header() {
           </Link>
           <Link
             className="text-sm font-medium hover:text-primary transition-colors"
-            href="/round-the-island-v2"
+            href="/round-the-island"
           >
             The Full Circle
           </Link>
@@ -82,7 +82,7 @@ export function Header() {
           </Link>
           <Link
             className="text-sm font-medium hover:text-primary transition-colors"
-            href="/round-the-island-v2"
+            href="/round-the-island"
             onClick={() => setMobileOpen(false)}
           >
             The Full Circle

@@ -20,6 +20,7 @@ const inputClass =
 
 export function EnquiryForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const {
     register,
     handleSubmit,
@@ -29,10 +30,18 @@ export function EnquiryForm() {
   });
 
   async function onSubmit(data: EnquiryFormValues) {
-    // TODO Phase 2: POST to /api/enquiry
-    console.log("Enquiry:", data);
-    await new Promise((r) => setTimeout(r, 800)); // Simulate async
-    setSubmitted(true);
+    setSubmitError(false);
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error("Failed");
+      setSubmitted(true);
+    } catch {
+      setSubmitError(true);
+    }
   }
 
   if (submitted) {
@@ -125,6 +134,16 @@ export function EnquiryForm() {
           <p className="text-red-500 text-xs mt-1">{errors.message.message}</p>
         )}
       </div>
+
+      {submitError && (
+        <p className="text-red-500 text-sm">
+          Something went wrong. Please try again or email us directly at{" "}
+          <a href="mailto:info@nonames.lk" className="underline">
+            info@nonames.lk
+          </a>
+          .
+        </p>
+      )}
 
       <button
         type="submit"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { SriLankaMapServer } from "@/components/ui/sri-lanka-map-server";
 
 export default function HomePage() {
   return (
@@ -49,10 +50,18 @@ export default function HomePage() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-28 overflow-hidden" id="about">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="relative py-28 overflow-hidden" id="about">
+
+        {/* Mobile only: map as translucent background */}
+        <div className="md:hidden absolute inset-0 flex items-center justify-center pointer-events-none opacity-30">
+          <div className="w-[55%]">
+            <SriLankaMapServer />
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            {/* Left: label + heading + quote */}
+            {/* Left: label + heading + quote + stats */}
             <div className="relative">
               {/* Decorative oversized quotation mark */}
               <div className="absolute -top-8 -left-4 text-[80px] md:text-[180px] leading-none text-primary/10 font-black select-none pointer-events-none">
@@ -64,21 +73,17 @@ export default function HomePage() {
               <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
                 Beyond the<br />Tourist Loop.
               </h2>
-              <p className="text-lg text-slate-600 leading-relaxed italic border-l-2 border-primary pl-6">
+              <p className="text-lg text-slate-600 leading-relaxed italic border-l-2 border-primary pl-6 mb-5">
                 We design travel experiences through the parts of Sri Lanka
                 the tourist loop never reaches. The wild northwest. The remote
                 eastern coast. The Tamil north.
               </p>
-            </div>
-
-            {/* Right: body text + stats grid */}
-            <div className="space-y-8">
-              <p className="text-base md:text-lg text-slate-600 leading-relaxed">
-                Places that don&apos;t make the highlight reel but stay with you
-                longer than the ones that do. Every trip is built as a sequence.
-                The order matters. The transitions matter. Nothing is filler.
+              <p className="text-base text-slate-600 leading-relaxed mb-8">
+                Places that don&apos;t make the highlight reel but stay with you longer
+                than the ones that do. Every trip is built as a sequence. The order
+                matters. The transitions matter. Nothing is filler.
               </p>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 {[
                   { stat: "2", label: "Curated Journeys" },
                   { stat: "25", label: "Max Group Size" },
@@ -87,16 +92,23 @@ export default function HomePage() {
                 ].map(({ stat, label }) => (
                   <div
                     key={label}
-                    className="p-5 rounded-xl border border-primary/15 bg-primary/5"
+                    className="p-3 rounded-lg border border-primary/30 bg-bg-dark"
                   >
-                    <div className="text-3xl font-black text-slate-900 mb-1">
+                    <div className="text-2xl font-black text-primary mb-0.5">
                       {stat}
                     </div>
-                    <div className="text-sm text-slate-500 font-medium">
+                    <div className="text-xs text-slate-300 font-medium">
                       {label}
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Right: map — desktop only */}
+            <div className="hidden md:flex justify-center">
+              <div className="w-full max-w-[300px] md:max-w-[360px]">
+                <SriLankaMapServer />
               </div>
             </div>
           </div>
