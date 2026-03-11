@@ -167,7 +167,7 @@ export default function HomePage() {
 
             {/* Journey Card 2 */}
             <Link
-              href="/round-the-island"
+              href="/round-the-island-v2"
               className="bg-white border border-primary/10 rounded-xl overflow-hidden shadow-sm flex flex-col group"
             >
               <div className="h-72 overflow-hidden relative">

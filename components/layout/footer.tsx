@@ -35,7 +35,7 @@ export function Footer() {
             <nav className="flex flex-col gap-2 text-sm text-slate-600">
               <Link href="/" className="hover:text-primary transition-colors">Home</Link>
               <Link href="/northwest-corridor" className="hover:text-primary transition-colors">The Untouched Coast</Link>
-              <Link href="/round-the-island" className="hover:text-primary transition-colors">The Full Circle</Link>
+              <Link href="/round-the-island-v2" className="hover:text-primary transition-colors">The Full Circle</Link>
               <Link href="/contact" className="hover:text-primary transition-colors">Get in Touch</Link>
             </nav>
           </div>
