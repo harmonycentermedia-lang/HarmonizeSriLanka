@@ -13,7 +13,7 @@ export default function NorthwestCorridorPage() {
     <div className="max-w-5xl mx-auto px-4 py-8">
       {/* Hero */}
       <section className="mb-12">
-        <div className="relative h-[500px] rounded-3xl overflow-hidden mb-8 group">
+        <div className="relative h-[220px] sm:h-[350px] md:h-[500px] rounded-3xl overflow-hidden mb-8 group">
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb7aQab6Q_sC71kDAnaJbfBTNz9mhbzZqwmZM2oz3dWTyI6MRJfCj26JB3tgccEAIwNJsTHtCDJeyew8Mq4nFyfCgdX4gnPLIRGWIkSgvRVojjm50Xmdjszs_bGAg0qsSFjjKQ4dpBV7sFEnGIbD800L9x_ktAZhU91rA1F9r25XPcF1KNxnqftJ7IgZE1Yhn4U7dfBAymW59KmajDDuo6AVxTAADmjM1FmUh0hCdAmzsW5RBzx05laqAzO8aIsrUox4B61HZt"
@@ -21,7 +21,7 @@ export default function NorthwestCorridorPage() {
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute bottom-0 left-0 p-8 z-20 w-full">
+          <div className="absolute bottom-0 left-0 p-4 sm:p-8 z-20 w-full">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
               The Untouched Coast
             </h1>
@@ -83,7 +83,7 @@ export default function NorthwestCorridorPage() {
         <h2 className="text-3xl font-bold mb-10">The Journey</h2>
 
         {/* Day 01 */}
-        <div className="relative pl-8 md:pl-0">
+        <div className="relative pl-14 md:pl-0">
           <div className="md:grid md:grid-cols-2 md:gap-12 items-center">
             <div className="hidden md:block">
               <Image
@@ -126,7 +126,7 @@ export default function NorthwestCorridorPage() {
         </div>
 
         {/* Day 02 */}
-        <div className="relative pl-8 md:pl-0">
+        <div className="relative pl-14 md:pl-0">
           <div className="md:grid md:grid-cols-2 md:gap-12 items-center">
             <div className="relative order-2 md:order-1">
               <div className="absolute -left-12 top-0 h-full w-0.5 bg-slate-200 md:hidden" />
@@ -166,7 +166,7 @@ export default function NorthwestCorridorPage() {
         </div>
 
         {/* Day 03 */}
-        <div className="relative pl-8 md:pl-0">
+        <div className="relative pl-14 md:pl-0">
           <div className="md:grid md:grid-cols-2 md:gap-12 items-center">
             <div className="hidden md:block">
               <Image
@@ -209,7 +209,7 @@ export default function NorthwestCorridorPage() {
         </div>
 
         {/* Day 04 */}
-        <div className="relative pl-8 md:pl-0">
+        <div className="relative pl-14 md:pl-0">
           <div className="md:grid md:grid-cols-2 md:gap-12 items-center">
             <div className="relative order-2 md:order-1">
               <div className="absolute -left-12 top-0 h-full w-0.5 bg-slate-200 md:hidden" />
@@ -292,7 +292,7 @@ export default function NorthwestCorridorPage() {
       </section>
 
       {/* What's Included */}
-      <section className="mb-20 bg-primary/5 rounded-3xl p-8 md:p-12">
+      <section className="mb-20 bg-primary/5 rounded-3xl p-6 md:p-12">
         <h2 className="text-3xl font-bold mb-10">What&apos;s Included</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
@@ -316,7 +316,7 @@ export default function NorthwestCorridorPage() {
       </section>
 
       {/* CTA */}
-      <section className="mb-20 text-center bg-white border border-slate-200 rounded-3xl p-12 shadow-xl">
+      <section className="mb-20 text-center bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 md:p-12 shadow-xl">
         <h2 className="text-4xl font-bold mb-4">
           Three days. Zero tourist traps.
         </h2>

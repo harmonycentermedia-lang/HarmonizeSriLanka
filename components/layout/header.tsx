@@ -7,7 +7,7 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-bg-light/80 backdrop-blur-md sticky top-0 z-50">
+    <header className="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-4 sm:px-6 md:px-12 lg:px-20 py-4 bg-bg-light/80 backdrop-blur-md sticky top-0 z-50">
       <Link href="/" className="flex items-center gap-3 text-slate-900">
         <div className="w-8 h-8 text-primary">
           <svg

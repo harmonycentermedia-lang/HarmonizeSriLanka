@@ -21,9 +21,9 @@ export default function HomePage() {
           <span className="text-white font-mono text-sm tracking-[0.3em] uppercase mb-6 block border border-white/40 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md">
             Curated Journeys
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1] drop-shadow-xl">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight leading-[1.1] drop-shadow-xl">
             The island is a circle.
-            <span className="block text-3xl md:text-5xl lg:text-6xl font-serif text-slate-100 italic mt-4 font-light drop-shadow-lg">
+            <span className="block text-xl sm:text-3xl md:text-5xl lg:text-6xl font-serif text-slate-100 italic mt-4 font-light drop-shadow-lg">
               Most people only see a line.
             </span>
           </h1>
@@ -49,24 +49,57 @@ export default function HomePage() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="max-w-5xl mx-auto px-6 py-20 text-center" id="about">
-        <span className="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">
-          Our Philosophy
-        </span>
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-slate-900 leading-tight">
-          Beyond the Tourist Loop
-        </h2>
-        <div className="space-y-6">
-          <p className="text-lg md:text-xl text-slate-700 leading-relaxed font-light italic">
-            &ldquo;We design travel experiences through the parts of Sri Lanka
-            the tourist loop never reaches. The wild northwest. The remote
-            eastern coast. The Tamil north.&rdquo;
-          </p>
-          <p className="text-base md:text-lg text-slate-600 max-w-3xl mx-auto">
-            Places that don&apos;t make the highlight reel but stay with you
-            longer than the ones that do. Every trip is built as a sequence. The
-            order matters. The transitions matter. Nothing is filler.
-          </p>
+      <section className="py-28 overflow-hidden" id="about">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
+            {/* Left: label + heading + quote */}
+            <div className="relative">
+              {/* Decorative oversized quotation mark */}
+              <div className="absolute -top-8 -left-4 text-[80px] md:text-[180px] leading-none text-primary/10 font-black select-none pointer-events-none">
+                &ldquo;
+              </div>
+              <span className="text-primary font-bold uppercase tracking-widest text-xs mb-6 block">
+                Our Philosophy
+              </span>
+              <h2 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
+                Beyond the<br />Tourist Loop.
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed italic border-l-2 border-primary pl-6">
+                We design travel experiences through the parts of Sri Lanka
+                the tourist loop never reaches. The wild northwest. The remote
+                eastern coast. The Tamil north.
+              </p>
+            </div>
+
+            {/* Right: body text + stats grid */}
+            <div className="space-y-8">
+              <p className="text-base md:text-lg text-slate-600 leading-relaxed">
+                Places that don&apos;t make the highlight reel but stay with you
+                longer than the ones that do. Every trip is built as a sequence.
+                The order matters. The transitions matter. Nothing is filler.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { stat: "2", label: "Curated Journeys" },
+                  { stat: "25", label: "Max Group Size" },
+                  { stat: "100%", label: "Off the Loop" },
+                  { stat: "0", label: "Filler Days" },
+                ].map(({ stat, label }) => (
+                  <div
+                    key={label}
+                    className="p-5 rounded-xl border border-primary/15 bg-primary/5"
+                  >
+                    <div className="text-3xl font-black text-slate-900 mb-1">
+                      {stat}
+                    </div>
+                    <div className="text-sm text-slate-500 font-medium">
+                      {label}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -162,7 +195,7 @@ export default function HomePage() {
       {/* Why Harmonize Section */}
       <section className="py-24 px-6 max-w-7xl mx-auto" id="why">
         <h2 className="text-3xl font-bold text-center mb-16">Why Harmonize</h2>
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
           <div className="text-center p-6 border border-primary/5 rounded-xl hover:bg-primary/5 transition-colors">
             <div className="w-12 h-12 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
               <span className="material-symbols-outlined">route</span>
@@ -195,12 +228,12 @@ export default function HomePage() {
           </div>
           <div className="text-center p-6 border border-primary/5 rounded-xl hover:bg-primary/5 transition-colors">
             <div className="w-12 h-12 bg-primary/20 text-primary rounded-full flex items-center justify-center mx-auto mb-6">
-              <span className="material-symbols-outlined">book</span>
+              <span className="material-symbols-outlined">eco</span>
             </div>
-            <h4 className="font-bold mb-2">Something to keep</h4>
+            <h4 className="font-bold mb-2">Nature, not spectacle</h4>
             <p className="text-sm text-slate-600">
-              A hand-crafted printed journal and map to document your specific
-              narrative.
+              Wilpattu over Yala. Fewer jeeps. Wilder terrain. The kind of
+              safari that doesn&apos;t feel managed.
             </p>
           </div>
         </div>

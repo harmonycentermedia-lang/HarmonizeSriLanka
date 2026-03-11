@@ -129,7 +129,7 @@ export function EnquiryForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="bg-primary text-bg-dark px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full sm:w-auto bg-primary text-bg-dark px-10 py-4 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isSubmitting ? "Sending..." : "Send enquiry"}
       </button>

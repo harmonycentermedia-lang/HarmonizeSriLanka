@@ -13,7 +13,7 @@ export default function RoundTheIslandPage() {
     <div className="max-w-7xl mx-auto">
       {/* Hero */}
       <section className="px-6 py-10 lg:py-16">
-        <div className="relative h-[500px] w-full rounded-xl overflow-hidden group">
+        <div className="relative h-[220px] sm:h-[350px] md:h-[500px] w-full rounded-xl overflow-hidden group">
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
           <Image
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb9RPa2Tb1zhOul4cNBnLt54qB46oFj-qqWThbdM4NUwuWyQrNHLbuTw81x4rTh16Int89dxXjZAzq9D731YDXbu67tHvfO9aNjWDiAeMmMqqzasgfIi3VtTiJWC9fAVLmhUZggch8Ca5CTPMCLqRZDJAhk8eXOAH-77kVWYJZMNEA-ZngzGzb4akqYz3rcnpyGnbtEv57dqPtspdsW6ALwHsKfhvZy6DBw1-lI3I1vylwlZP_cDsV4x2DpojBsmuf826Eaw66"
@@ -21,8 +21,8 @@ export default function RoundTheIslandPage() {
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute bottom-0 left-0 p-8 lg:p-12 z-20 max-w-3xl">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-4">
+          <div className="absolute bottom-0 left-0 p-4 sm:p-6 lg:p-12 z-20 max-w-3xl">
+            <h1 className="text-2xl sm:text-4xl lg:text-6xl font-bold text-white mb-4">
               Seven Days Around the Pearl
             </h1>
             <p className="text-primary text-xl font-medium">
@@ -332,7 +332,7 @@ export default function RoundTheIslandPage() {
 
       {/* CTA Section */}
       <section className="px-6 py-24 text-center" id="book">
-        <div className="max-w-3xl mx-auto bg-primary/10 rounded-3xl p-12 border border-primary/20">
+        <div className="max-w-3xl mx-auto bg-primary/10 rounded-3xl p-6 sm:p-8 md:p-12 border border-primary/20">
           <h2 className="text-4xl font-bold mb-6">
             The only trip that tells the whole island.
           </h2>
